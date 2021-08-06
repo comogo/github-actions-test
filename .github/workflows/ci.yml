@@ -15,5 +15,7 @@ jobs:
 
       - name: Create commit
         run: |
+          git config --global user.email "deploy@example.com"
+          git config --global user.name "github_deploy"
           git checkout -b staging
           git push --force --set-upstream origin staging
